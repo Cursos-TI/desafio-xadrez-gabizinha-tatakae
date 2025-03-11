@@ -2,12 +2,62 @@
 
 // Desafio de Xadrez - MateCheck
 
+void torre(int t){
+    if (t > 0)
+    {
+        torre (t - 1);
+        printf("Direita\n", t);
+    }
+}
+
+void rainha(int r){
+    if (r > 0)
+    {
+        rainha (r - 1);
+        printf("Baixo\n", r);
+    }
+}
+
+void bispo(int b){
+    if (b > 0)
+    {
+        bispo (b - 1);
+        for (int i = 0; i <= b; i++)
+        {
+        for (int j = 0; j < b; j++)
+        {
+            printf("cima\n");
+        }
+        printf("esquerda\n");
+    }
+    }
+}
+
 int main() {
     // Variáveis declaradas
+    int movimento_torre = 5, movimento_rainha = 8, movimento_bispo = 4;
 
+    //Funções recursivas para o movimento das peças
+
+    printf("Movimentação da Torre:\n");
+    torre(movimento_torre);
+    printf("\n");
+
+    printf("Movimentação da Rainha:\n");
+    rainha(movimento_rainha);
+    printf("\n");
+
+    printf("Movimentação do Bispo:\n");
+    bispo(movimento_bispo);
+    printf("\n");
+    
+    
+
+    /*
     int bispo, torre, rainha, cavalo = 0;
     char direcao[20], direcao2[20], direcao3[20], direcao4[20], direcao5[20], direcao6[20];
     int i = 0, j = 0;
+    
 
     // Entrada de dados do usuário para o Bispo
 
@@ -35,7 +85,7 @@ int main() {
     printf("Indique a direção(direita ou esquerda, cima ou baixo):\n");
     scanf("%s", &direcao3);
 
-    // Movimentação da Torre com estrutura Do-While
+     com estrutura Do-While
 
     printf("Movimento da Torre: \n");
     do
@@ -81,6 +131,7 @@ int main() {
         printf("%s\n", direcao6);
         
     }
+    */
     
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
