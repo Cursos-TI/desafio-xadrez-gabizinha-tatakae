@@ -57,15 +57,17 @@ int main() {
     // Inclua o uso de continue e break dentro dos loops
 
     printf("Movimentação do Cavalo:\n");
-    for (int i = 0, j = 2; i < 1 && j > 0; i++, j--)
+    for (int i = 0, j = 5; i < 5 && j > 0; i += (i % 2 == 0) ? 1 : 2, j--)
     {
-        
+        if(i > 0){
+            printf("Cima\n");
+            continue;
+        }
+
+        if(j > 0){
+            printf("Direita\n");
+        }   
     }
-    //i roda uma vez
-    //j roda duas vezes 
-    //continue pula uma iteração
-    // break para o programa
-    
 
     return 0;
 }
