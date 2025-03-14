@@ -54,9 +54,8 @@ int main() {
     printf("\n");
 
     // Movimentação do Cavalo em L usando loops com variáveis múltiplas e condições avançadas
-    // Inclua o uso de continue e break dentro dos loops
 
-    printf("Movimentação do Cavalo:\n");
+    printf("Movimento do Cavalo:\n");
     for (int i = 0, j = 5; i < 5 && j > 0; i += (i % 2 == 0) ? 1 : 2, j--)
     {
         if(i > 0){
