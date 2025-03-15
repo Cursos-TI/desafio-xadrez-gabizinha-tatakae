@@ -67,6 +67,23 @@ int main() {
             printf("Direita\n");
         }   
     }
+    
+        printf("Movimento do Cavalo:\n");
 
+        for (int i = 0, j = 3; i < 5 && j > 0; i++, j--) {
+            if (i % 2 == 0) {
+                printf("Cima\n");
+                continue;  // Pula a próxima verificação e continua o loop
+            }
+
+            if (j % 2 == 0) {
+                printf("direita\n");
+            }
+
+            if (i == 3) {  // Condição arbitrária para encerrar antes do fim
+                printf("Parando o movimento.\n");
+                break;  // Interrompe o loop antes do fim
+            }
+        }
     return 0;
 }
